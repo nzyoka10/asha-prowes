@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labour Recruitment Management System Gantt Chart</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Gantt Chart CSS -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css">
+  <!-- Gantt Chart JavaScript -->
+  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+  <style>
+    #gantt{
+      padding-left: 0;
+      margin-left: 10pc;
+      font-size: 16px;
+    }
+
+    #form{
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-4" id="gantt">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-center">Labour Recruitment Management System</h2>
+        <!-- Date/Calendar Section -->
+        <div class="form-group" id="form">
+          <label for="start-date">Start Date</label>
+          <input type="date" class="form-control" id="start-date">
+        </div>
+        <div class="form-group" id="form">
+          <label for="end-date">End Date</label>
+          <input type="date" class="form-control" id="end-date">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-center" id="form"><strong>Blue Collar connection</strong> Gantt Chart</h2>
+        <!-- Gantt Chart -->
+        <div id="gantt-chart" style="width: 170%; height: 500px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript (Vanilla) -->
+  <script>
+    // Sample data for the Gantt Chart
+    const tasks = [
+      { id: 1, name: 'Project Initiation', start: '2023-08-15', end: '2023-08-20' },
+      { id: 2, name: 'Planning Phase', start: '2023-08-22', end: '2023-09-05' },
+      { id: 3, name: 'Design', start: '2023-09-07', end: '2023-09-20' },
+      { id: 4, name: 'Developing', start: '2023-09-22', end: '2023-10-15' },
+      { id: 5, name: 'Testing', start: '2023-10-17', end: '2023-11-05' },
+      { id: 6, name: 'Deployment and Training', start: '2023-11-07', end: '2023-11-20' },
+    ];
+
+    // Function to create the Gantt Chart
+    function createGanttChart() {
+      const tasksData = tasks.map(task => ({
+        id: task.id,
+        text: task.name,
+        start_date: task.start,
+        end_date: task.end,
+      }));
+
+      gantt.config.xml_date = '%Y-%m-%d';
+      gantt.init('gantt-chart');
+      gantt.parse({ data: tasksData });
+    }
+
+    document.addEventListener('DOMContentLoaded', createGanttChart);
+  </script>
+</body>
+
+</html>

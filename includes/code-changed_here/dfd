@@ -1,0 +1,67 @@
+
+@startuml
+start
+:Worker;
+:Client;
+:Admin;
+:Job Matching;
+:Manage Platform;
+stop
+@enduml
+
+MODIFY this(above) code
+    1. Start
+    2. take use inputs and process them
+    3. validation of users
+    4. admin to validate clients and workers self-registered for 
+        account actuvation 
+    5. client to be matched with workers within the same geographical 
+        area pre-defied by the the client. 
+        If not specified:
+            then client to state area 
+        else NO match:
+            suggest match
+        else NO match
+            END
+    
+    6. client to be matched with workers
+    7. client can send reviews after service 
+    8. end if all true 
+    9. stop 
+
+    write the Flow chart code, for LabourConnect
+
+   
+
+
+    System Structure
+1. User:
+   - Represents the different users interacting with the system, including workers and clients.
+
+2. Admin:
+   - Admin users responsible for validation and account activation.
+   - Validates users (workers and clients) to ensure authenticity.
+   - Activates user accounts after successful validation.
+
+3. LabourConnect System:
+   - Central component of the system that coordinates the interactions.
+   - Collects and processes user input data (worker or client information).
+   - Matches clients with suitable workers based on specified areas.
+   - Allows clients to send reviews after receiving services.
+   - Checks if all required steps are true for both users and the system.
+
+Flow of the System:
+
+- Users initiate the process by providing input data.
+- Clients specify the desired geographical area for worker matching.
+- Users can send reviews after services.
+- Admins validate users' authenticity and activate their accounts.
+- Admins validate clients and workers for successful system entry.
+- The system processes user data and matches workers with clients.
+- The system checks if all steps are true for clients and workers.
+- If all steps are true:
+  - The system confirms that all required conditions are met and ends.
+  - Clients and users are informed that the process is complete.
+- If any step is not true:
+  - The system stops and informs users that conditions are not met.
+  - The process ends without further actions.
