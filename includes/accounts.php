@@ -155,6 +155,34 @@ class User {
         return $result->pending_requests;
     }
 
+	public static function countPendingClientRequests() {
+        global $mydb;
+        
+        $sql = "SELECT COUNT(*) AS pending_requests FROM tblrequest WHERE status = 'PENDING' ";
+        $mydb->setQuery($sql);
+        $result = $mydb->loadSingleResult();
+
+        return $result->pending_requests;
+    }
+
+	// Function to fetch names and messages of pending client requests
+	public static function getPendingClientRequests() {
+		global $mydb;
+		
+		// Query to fetch names and messages of pending client requests
+		$sql = "SELECT c.Fname, c.Lname, r.Request, c.Status 
+				FROM tblclients c 
+				INNER JOIN tblrequest r ON c.ClientID = r.ClientID 
+				WHERE c.Status = 'PENDING'";
+		$mydb->setQuery($sql);
+		$result = $mydb->loadResultList();
+	
+		return $result;
+	}
+
+
+	
+	
 
 }
 ?>

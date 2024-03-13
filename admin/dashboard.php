@@ -3,7 +3,6 @@
 body {
     background-color: #101123; ; /* Dark navy blue background */
 	color: wheat;
-	font-fami
 }
 
 header {
@@ -21,6 +20,33 @@ header {
     font-size: 24px;
 }
 
+.showTable{
+
+	border: 2px solid #333;
+	border-radius: 12px;
+
+	margin-top: 20px;
+    padding: 20px;
+}
+
+
+
+.showTable table{
+	align-items: center;
+	width: 100%;
+    border-collapse: collapse;
+	border-radius: 10px;
+}
+
+.showTable th, .showTable td {
+    padding: 8px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+.showTable th {
+    background-color: #444;
+}
 
 </style>
 
@@ -46,11 +72,11 @@ header {
 
 	<div class="col-md-3 d-flex justify-content-space-around">
 		<div class="box rounded">
-			<h2>Pending Request</h2>
+			<h2>Client Requests</h2>
 			<span class="num">
 				<?php 
 					require_once('../includes/accounts.php'); // Adjust the path accordingly
-					$pending_requests_count = User::countPendingRequests();
+					$pending_requests_count = User::countPendingClientRequests();
 					echo $pending_requests_count;
 				?>
 			</span>
@@ -82,10 +108,51 @@ header {
 			</span>
 		</div>
 	</div>
+
 
 </div>
 
-<!-- Chart -->
+
+
+<div class="showTable">
+	
+<?php 
+    // Fetch pending client requests
+    $pending_requests = User::getPendingClientRequests();
+
+    // Check if there are any pending requests
+    if (!empty($pending_requests)) {
+        // Display table headers
+        echo "<table>";
+        echo "<thead>";
+        echo "<tr>";
+        echo "<th>First Name</th>";
+        echo "<th>Last Name</th>";
+        echo "<th>Request</th>";
+        echo "<th>Status</th>";
+        echo "</tr>";
+        echo "</thead>";
+        echo "<tbody>";
+
+        // Display each pending request as a table row
+        foreach ($pending_requests as $request) {
+            echo "<tr>";
+            echo "<td>" . $request->Fname . "</td>";
+            echo "<td>" . $request->Lname . "</td>";
+            echo "<td>" . $request->Request . "</td>";
+            echo "<td>" . $request->Status . "</td>";
+            echo "</tr>";
+        }
+
+        echo "</tbody>";
+        echo "</table>";
+    } else {
+        // If there are no pending requests, display a message
+        echo "No pending requests found.";
+    }
+    ?>
+	
+</div>
 
 
 

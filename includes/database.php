@@ -45,21 +45,47 @@ class Database
         return $result;
     }
 
-    public function loadResultList($key = '')
-    {
+    public function loadResultList($key = '') {
         $cur = $this->executeQuery();
-
+    
+        // Check if the query executed successfully
+        if ($cur === false) {
+            // Handle the error here
+            die("Error executing query: " . $this->conn->error);
+        }
+    
         $array = array();
-        while ($row = $cur->fetch_object()) {
-            if ($key) {
-                $array[$row->$key] = $row;
-            } else {
-                $array[] = $row;
+        // Check if there are any rows returned
+        if ($cur->num_rows > 0) {
+            while ($row = $cur->fetch_object()) {
+                if ($key) {
+                    $array[$row->$key] = $row;
+                } else {
+                    $array[] = $row;
+                }
             }
         }
-        $cur->free_result();
+    
+        $cur->close(); // Close the result set
         return $array;
     }
+    
+
+    // public function loadResultList($key = '')
+    // {
+    //     $cur = $this->executeQuery();
+
+    //     $array = array();
+    //     while ($row = $cur->fetch_object()) {
+    //         if ($key) {
+    //             $array[$row->$key] = $row;
+    //         } else {
+    //             $array[] = $row;
+    //         }
+    //     }
+    //     $cur->close();
+    //     return $array;
+    // }
 
     public function loadSingleResult()
     {
