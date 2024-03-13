@@ -66,7 +66,7 @@
                   </div>
                   <div class="unit-body">
                     <h4 class="box-minimal-title"><a href="index.php?q=contact">Free Consultations</a></h4>
-                    <div class="box-minimal-text">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</div>
+                    <div class="box-minimal-text">Free consultation done after applying .</div>
                   </div>
                 </div>
               </article>
@@ -79,7 +79,7 @@
                   </div>
                   <div class="unit-body">
                     <h4 class="box-minimal-title"><a href="#">Qualified Team</a></h4>
-                    <div class="box-minimal-text">Barbatus, flavum genetrixs tandem amor de salvus, festus vortex. Audax, peritus spatiis saepe aperto de.</div>
+                    <div class="box-minimal-text">Effective teams often have a unique set of characteristics that help ensure their success by contributing to increased productivity.</div>
                   </div>
                 </div>
               </article>
@@ -91,8 +91,8 @@
                     <div class="box-minimal-icon fa-calendar-o"></div>
                   </div>
                   <div class="unit-body">
-                    <h4 class="box-minimal-title"><a href="index.php?q=services">Extensive Services</a></h4>
-                    <div class="box-minimal-text">Fidess sunt ignigenas de secundus zirbus. A falsis, bubo fortis vita. Festus particula unus quaestios palus est.</div>
+                    <h4 class="box-minimal-title"><a href="index.php?q=services"> Services</a></h4>
+                    <div class="box-minimal-text">Their work included tasks such as Plumbing, pipefitting, steamfitters, Landscaping, Construction, Maintenance Driving, Structural iron and steel workers, Electricians, Elevator installers.</div>
                   </div>
                 </div>
               </article>
@@ -105,7 +105,7 @@
                   </div>
                   <div class="unit-body">
                     <h4 class="box-minimal-title"><a href="#">99% Satisfied Customers</a></h4>
-                    <div class="box-minimal-text">Amicitia moris, tanquam brevis mons. Sunt sensoremes experientia barbatus, castus cannabises. Varius palus.</div>
+                    <div class="box-minimal-text">Maintaining a high satisfaction rate requires ongoing efforts to understand customer needs, adapt to changing expectations, and consistently deliver exceptional experiences.</div>
                   </div>
                 </div>
               </article>

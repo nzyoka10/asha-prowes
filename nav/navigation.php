@@ -95,7 +95,7 @@
                 </div>
                 <div class="rd-navbar-info rd-navbar-collapse">
                   <article class="info-modern">
-                    <div class="info-modern-icon fa-phone"></div><a class="info-modern-link" href="#">Tel.: (+254) 722 274 136</a>
+                    <div class="info-modern-icon fa-phone"></div><a class="info-modern-link" href="#">Tel.: (+254) 705108822</a>
                   </article>
         
                   <p>Call us now to get a free business consultation from our experts!</p>
@@ -157,7 +157,7 @@
                       <div class="unit-left">
                         <div class="info-classic-icon fa-map-marker"></div>
                       </div>
-                      <div class="unit-body"><a class="info-classic-link" href="#">Blue Towers, Vako Road-South B</a></div>
+                      <div class="unit-body"><a class="info-classic-link" href="#">Blue Towers, Vako Road-South C</a></div>
                     </div>
                   </article>
                 </div>
@@ -167,7 +167,7 @@
                       <div class="unit-left">
                         <div class="info-classic-icon fa-envelope"></div>
                       </div>
-                      <div class="unit-body"><a class="info-classic-link" href="mailto:#">info@bluecollar.com</a></div>
+                      <div class="unit-body"><a class="info-classic-link" href="mailto:#">info@labourconnect.com</a></div>
                     </div>
                   </article>
                 </div>
@@ -181,7 +181,7 @@
                       <div class="unit-left">
                         <div class="info-classic-icon fa-phone"></div>
                       </div>
-                      <div class="unit-body"><a class="info-classic-link" href="tel:#">+254 723 266 163</a></div>
+                      <div class="unit-body"><a class="info-classic-link" href="tel:#">+254 705 108 822</a></div>
                     </div>
                   </article>
                 </div>
@@ -215,7 +215,7 @@
                       <div class="unit-left">
                         <div class="info-classic-icon fa-twitter"></div>
                       </div>
-                      <div class="unit-body"><a class="info-classic-link" href="https://twitter.com/mussys_mustapha?s=09">Follow on Twitter</a></div>
+                      <div class="unit-body"><a class="info-classic-link" href="https://twitter.com aishajama ?s=09">Follow on Twitter</a></div>
                     </div>
                   </article>
                 </div>

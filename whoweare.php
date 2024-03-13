@@ -3,8 +3,8 @@
           <div class="row row-30">
             <div class="col-md-6">
               <h4>About us</h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Suspendisse commodo tempor sagittis!</p>
-              <p>In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium.</p>
+              <p>The labour connect is at the forefront of revolutionizing the way job seekers and employers interacted in the modern labour market. Their primary focus is to create an efficient, transparent, and user-friendly platform that facilitated seamless job matching and streamlined the recruitment process for all parties involved.
+</p>
               <hr class="hr-40">
               <h4>What we offer</h4>
               <div class="row row-30">
