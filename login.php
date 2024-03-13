@@ -10,7 +10,12 @@ if(isset($_POST['btnLogin'])){
    if ($email == '' OR $upass == '') {
 
       message("Invalid Username and Password!", "error");
-      echo '<script>alert("Invalid Username and Password!")</script>';
+      echo '<script>
+
+        alert("Invalid Username and Password!")
+
+
+      </script>';
       redirect(web_root."index.php?q=login&auth=client");
 
     }else{
@@ -22,7 +27,11 @@ if(isset($_POST['btnLogin'])){
            redirect(web_root."client/"); 
         }else{
            message("Account does not exist! Please contact Administrator.", "error");
-            echo '<script>alert("Account does not exist! Please contact Administrator.")</script>';
+            echo '<script>
+
+              alert("Account does not exist! Please contact Administrator.")
+            
+              </script>';
            redirect(web_root."index.php?q=login&auth=client");
         }
    }

@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
     <link rel="icon" href="<?php echo web_root;?>images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,500"> 
     <link rel="stylesheet" href="<?php echo web_root;?>css/style.css"> 

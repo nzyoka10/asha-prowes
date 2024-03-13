@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="<?php echo web_root;?>admin/css/jquery.dataTables.min.css">
     <link rel="icon" href="<?php echo web_root;?>images/favicon.ico">
 	   <style type="text/css">
-	
+		.logo ul li{
+			border-radius: 12px;
+		}
 
 	   </style>  
 </head>
@@ -43,7 +45,7 @@
 </body>
 <footer > 
 	<div class="footer">
-		<p> @2023 Copyright. Prowes </p>
+		<p> @2024 Copyright. Prowes </p>
 
 	</div>
 

@@ -145,6 +145,16 @@ class User {
 	
 	}	
 
+	public static function countPendingRequests() {
+        global $mydb;
+        
+        $sql = "SELECT COUNT(*) AS pending_requests FROM tblclients WHERE status = 'PENDING' ";
+        $mydb->setQuery($sql);
+        $result = $mydb->loadSingleResult();
+
+        return $result->pending_requests;
+    }
+
 
 }
 ?>
