@@ -158,7 +158,7 @@ class User {
 	public static function countPendingClientRequests() {
         global $mydb;
         
-        $sql = "SELECT COUNT(*) AS pending_requests FROM tblrequest WHERE status = 'PENDING' ";
+        $sql = "SELECT * FROM tblclients ";
         $mydb->setQuery($sql);
         $result = $mydb->loadSingleResult();
 
@@ -180,8 +180,42 @@ class User {
 		return $result;
 	}
 
-
+	// public static function countUsers() {
+	// 	global $mydb;
+		
+	// 	$sql = "SELECT COUNT(*) AS total_users FROM tblusers";
+	// 	$mydb->setQuery($sql);
+	// 	$result = $mydb->loadSingleResult();
 	
+	// 	// Check if $result is not null before accessing the property
+	// 	if ($result !== null && isset($result->total_users)) {
+	// 		return $result->total_users;
+	// 	} else {
+	// 		return 0; // Return 0 if no result is found
+	// 	}
+	// }
+	
+
+
+	public static function getTotalClients() {
+		global $mydb;
+		
+		$sql = "SELECT COUNT(*) AS total_users FROM tblclients";
+		$mydb->setQuery($sql);
+		$result = $mydb->loadSingleResult();
+	
+		return $result->total_users;
+	}
+
+	public static function getServiceProviders() {
+		global $mydb;
+		
+		$sql = "SELECT COUNT(*) AS total_users FROM tblserviceprovider";
+		$mydb->setQuery($sql);
+		$result = $mydb->loadSingleResult();
+	
+		return $result->total_users;
+	}
 	
 
 }

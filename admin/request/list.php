@@ -5,7 +5,10 @@
 ?>   <div class="page-header">
 		<h2>List of Customer's Request <span><a class="btn btn-primary btn-sm" href="index.php?view=add">Add New</a></span></h2> 
 	</div>
+
+	
         <div class="table-responsive">
+			
                 <table class="hover" id="dash-tables"   cellspacing="0" >
 				  <thead> 
 				  		<th>RequestID</th>
@@ -18,9 +21,7 @@
 				  </thead> 
 				  <tbody>
 				  	<?php 
-				 // SELECT `RequestID`, `Request`, `Status`, `Remarks`, `ClientsID`, `ServiceID`, `USERID` FROM `tblrequest` WHERE 1
-				  	// SELECT `ClientID`, `Fname`, `Lname`, `Address`, `ContactNo` FROM `tblclients` WHERE 1
-				  	// SELECT `ServiceID`, `ServiceName`, `ServiceContact`, `ServiceAddress`, `Services`, `spUsername`, `spPassword`, `Status`, `PicLoc` FROM `tblserviceprovider` WHERE 1
+
 
 				  		$mydb->setQuery("SELECT *,r.Status as stats 
 											FROM  `tblrequest` r, `tblserviceprovider` s,`tblclients` c 

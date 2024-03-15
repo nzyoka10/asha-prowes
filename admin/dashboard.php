@@ -10,42 +10,32 @@ header {
     padding: 20px 0;
 }
 
+header h1{
+	font-size: 1.5em;
+	text-align: left;	
+	padding: 2px;
+}
 .box {
-    background-color: #0E0C0C; /* Dark grey box background */
-    padding: 20px;
+    background-color: #333; /* Dark grey box background */
+    padding: 8px;
     border-radius: 10px;
 }
 
 .num {
-    font-size: 24px;
-}
-
-.showTable{
-	border: 2px solid #333;
-	border-radius: 12px;
-	margin-top: 20px;
-    padding: 20px;
-}
-
-
-
-.showTable table{
-	align-items: center;
-	width: 100%;
-    border-collapse: collapse;
-	border-radius: 10px;
-}
-
-.showTable th, .showTable td {
-    padding: 8px;
-    border: 1px solid #333;
-    text-align: left;
-	font-weight: 600;
-}
-
-.showTable th {
-    background-color: #444;
+    font-size: 28px;
+	text-align: center;
+	text-decoration: dotted;
+	cursor: pointer;
 	color: wheat;
+	padding: 32px;
+	font-weight: 770;
+}
+
+.display-data{
+	border: 1px solid;
+
+	margin-top: 12px;
+	padding: 28px;
 }
 
 </style>
@@ -57,101 +47,89 @@ header {
 </header>
 
 <div class="row no-gutters">
-	<div class="col-md-3 d-flex justify-content-center">
+	<div class="col-md-3 d-flex justify-content-center align-items-center"">
+		<div class="box rounded">
+			<h2>Total Clients</h2>
+			<span class="num">
+				<?php 
+					require_once('../includes/accounts.php'); 
+					$totalUsers = User::getTotalClients();
+					echo $totalUsers;
+				?>
+			</span>
+		</div>
+	</div>
+
+	<div class="col-md-3 d-flex justify-content-space-center align-items-center"">
+		<div class="box rounded">
+			<h2>Service Providers</h2>
+			<span class="num">
+				
+			<?php 
+				require_once('../includes/accounts.php'); 
+				$totalUsers = User::getServiceProviders();
+				echo $totalUsers;
+			?>			
+			</span>
+		</div>
+	</div>
+
+	<div class="col-md-3 d-flex justify-content-space-around-center align-items-center">
 		<div class="box rounded">
 			<h2>Pending Request</h2>
 			<span class="num">
-				<?php 
-					require_once('../includes/accounts.php'); // Adjust the path accordingly
-					$pending_requests_count = User::countPendingRequests();
-					echo $pending_requests_count;
-				?>
+			
 			</span>
 		</div>
 	</div>
-
-	<div class="col-md-3 d-flex justify-content-space-around">
-		<div class="box rounded">
-			<h2>Client Requests</h2>
-			<span class="num">
-				<?php 
-					require_once('../includes/accounts.php'); // Adjust the path accordingly
-					$pending_requests_count = User::countPendingClientRequests();
-					echo $pending_requests_count;
-				?>
-			</span>
-		</div>
-	</div>
-
-	<div class="col-md-3 d-flex justify-content-space-around">
-		<div class="box rounded">
-			<h2>Pending Request</h2>
-			<span class="num">
-				<?php 
-					require_once('../includes/accounts.php'); // Adjust the path accordingly
-					$pending_requests_count = User::countPendingRequests();
-					echo $pending_requests_count;
-				?>
-			</span>
-		</div>
-	</div>
-
-	<div class="col-md-3 d-flex justify-content-space-around">
-		<div class="box rounded">
-			<h2>Pending Request</h2>
-			<span class="num">
-				<?php 
-					require_once('../includes/accounts.php'); // Adjust the path accordingly
-					$pending_requests_count = User::countPendingRequests();
-					echo $pending_requests_count;
-				?>
-			</span>
-		</div>
-	</div>
-
 
 </div>
 
 
+<div class="display-data">
+	<p>All pending requests</p>
 
-<div class="showTable">
-	
-<?php 
-    // Fetch pending client requests
-    $pending_requests = User::getPendingClientRequests();
+<table class="hover" id="dash-tables"   cellspacing="0" >
+			  <thead> 
+					  <th>RequestID</th>
+					  <th>Request</th>
+					  <th>Clients</th>
+					  <th>Services</th>
+					  <th>Status</th>
+					  <th>Remarks</th>
+					  <th width="30%">Action</th>  
+			  </thead> 
+			  <tbody>
+				  <?php 
 
-    // Check if there are any pending requests
-    if (!empty($pending_requests)) {
-        // Display table headers
-        echo "<table>";
-        echo "<thead>";
-        echo "<tr>";
-        echo "<th>First Name</th>";
-        echo "<th>Last Name</th>";
-        echo "<th>Request</th>";
-        echo "<th>Status</th>";
-        echo "</tr>";
-        echo "</thead>";
-        echo "<tbody>";
 
-        // Display each pending request as a table row
-        foreach ($pending_requests as $request) {
-            echo "<tr>";
-            echo "<td>" . $request->Fname . "</td>";
-            echo "<td>" . $request->Lname . "</td>";
-            echo "<td>" . $request->Request . "</td>";
-            echo "<td>" . $request->Status . "</td>";
-            echo "</tr>";
-        }
+					  $mydb->setQuery("SELECT *,r.Status as stats 
+										FROM  `tblrequest` r, `tblserviceprovider` s,`tblclients` c 
+									WHERE r.ServiceID=s.ServiceID AND r.ClientID=c.ClientID ");
+					  $cur = $mydb->loadResultList();
 
-        echo "</tbody>";
-        echo "</table>";
-    } else {
-        // If there are no pending requests, display a message
-        echo "No pending requests found.";
-    }
-    ?>
-	
+					foreach ($cur as $result) {
+					  echo '<tr>'; 
+					  echo '<td>' . $result->RequestID.'</a></td>';
+					  echo '<td>'. $result->Request.'</td>';
+					  echo '<td>'. $result->Fname.' '. $result->Lname.'</td>';
+					  echo '<td>'. $result->ServiceName.'</td>';
+					  echo '<td>'.$result->stats.'</td>';
+					  echo '<td>'. $result->Remarks.'</td>';
+
+						$btn= '
+						  <a title="Confirm" href="index.php?view=edit&id='.$result->RequestID.'" class="btn btn-primary btn-sm  " ><i class="fa fa-edit"></i> Edit</a>
+						   <a title="View" href="index.php?view=view&id='.$result->RequestID.'" class="btn btn-info btn-sm  " ><i class="fa fa-edit"></i> View</a>
+						  <a title="Confirm" href="controller.php?action=confirm&id='.$result->RequestID.'" class="btn btn-success btn-sm  " ><i class="fa fa-edit"></i> Confirm</a>
+								   <a title="Cancel" href="controller.php?action=cancel&id='.$result->RequestID.'" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Cancel</a>'; 
+					  echo '<td > '.$btn.'</td>';
+					  echo '</tr>';
+				  } 
+				  ?>
+			  </tbody>
+				
+			</table>  
+
 </div>
 
 
