@@ -2,7 +2,7 @@
         <div class="container">
           <div class="row row-30">
             <div class="col-sm-6 col-md-4 wow fadeInUp">
-                <img src="images/TEST 1.jpg" alt="">
+                <img src="images/boos.jpg" alt="">
 
             <P>   </P>
               <H6>"Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum, erat tortor venenatis risus, sit amet cursus dui augue a arcu."</H6>
