@@ -32,10 +32,17 @@ header h1{
 }
 
 .display-data{
-	border: 1px solid;
+	border: 1px solid #333;
+	border-radius: 12px;
 
-	margin-top: 12px;
+	margin-top: 16px;
 	padding: 28px;
+}
+
+.display-data p{
+	padding: 3px;
+	color: #333;
+	font-family: curvise;
 }
 
 </style>
@@ -47,7 +54,8 @@ header h1{
 </header>
 
 <div class="row no-gutters">
-	<div class="col-md-3 d-flex justify-content-center align-items-center"">
+
+	<div class="col-md-3 d-flex justify-content-center align-items-center">
 		<div class="box rounded">
 			<h2>Total Clients</h2>
 			<span class="num">
