@@ -1,8 +1,8 @@
 <style>
 
 body {
-    background-color: #101123; ; /* Dark navy blue background */
-	color: wheat;
+    background-color: whitesmoke; ; /* Dark navy blue background */
+	color: #444;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
 }
 
 .box {
-    background-color: #444; /* Dark grey box background */
+    background-color: #0E0C0C; /* Dark grey box background */
     padding: 20px;
     border-radius: 10px;
 }
@@ -21,10 +21,8 @@ header {
 }
 
 .showTable{
-
 	border: 2px solid #333;
 	border-radius: 12px;
-
 	margin-top: 20px;
     padding: 20px;
 }
@@ -42,10 +40,12 @@ header {
     padding: 8px;
     border: 1px solid #333;
     text-align: left;
+	font-weight: 600;
 }
 
 .showTable th {
     background-color: #444;
+	color: wheat;
 }
 
 </style>
