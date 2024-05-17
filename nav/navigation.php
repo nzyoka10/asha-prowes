@@ -91,7 +91,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!--RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="<?php echo web_root;?>index.php"><img class="brand-logo-dark" src="<?php echo web_root;?>images/logo3.png" alt="" width="336" height="51"/></a>
+                    <!--Brand--><a class="brand" href="<?php echo web_root;?>index.php"><img class="brand-logo-dark" src="<?php echo web_root;?>images/logo.png" alt="" width="336" height="51"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-info rd-navbar-collapse">

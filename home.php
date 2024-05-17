@@ -18,17 +18,6 @@
               </div>
             </div>
           </div>
-   <!--        <div class="swiper-slide" data-slide-bg="images/slide-3.jpg">
-            <div class="swiper-slide-caption">
-              <div class="container">
-                <div class="row justify-content-end">
-                  <div class="col-lg-7 col-xl-6">
-                    <h1 class="text-primary" data-caption-animate="fadeIn" data-caption-delay="100">A wide range of global business information</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
         <!--Swiper Pagination-->
         <div class="swiper-pagination"></div>
