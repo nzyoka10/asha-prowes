@@ -147,8 +147,9 @@ if(isset($_POST['btnLogin'])){
 .wrapper-login {
   background-color: #fff;
   border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-      0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    4px 18px 28px rgba(10,21,0,0.25), 
+    0 10px 10px rgba(0,12,0,0.22);
   position: relative;
   overflow: hidden;
   width: 768px;
@@ -219,7 +220,7 @@ if(isset($_POST['btnLogin'])){
  .overlay {
   background: #62BFE6;
   background: -webkit-linear-gradient(to right, #0042CB, #62BFE6);
-  background: linear-gradient(to right, #0042CB, #62BFE6);
+  background: linear-gradient(to bottom, #0042CB, #62BFE6);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -275,7 +276,7 @@ if(isset($_POST['btnLogin'])){
 <div class="wrapper-login container" id="container"> 
   <div class="form-container sign-in-sp-container">
     <form action="index.php?q=login&auth=provider" method="POST">
-      <h1>Login as Service Provider</h1>  
+      <h1>Service Provider LogIn</h1>  
       <input type="text" placeholder="Username" name="username" />
       <input type="password" placeholder="Password" name="pass" /> 
       <button name="btnsp_login">Login</button>
@@ -283,7 +284,7 @@ if(isset($_POST['btnLogin'])){
   </div>
   <div class="form-container sign-in-container">
     <form action="index.php?q=login&auth=client" method="POST">
-      <h1>Login as Client</h1>  
+      <h1>Client LogIn</h1>  
       <input type="text" placeholder="Username" name="username" />
       <input type="password" placeholder="Password" name="pass" /> 
       <button name="btnLogin">Login</button>

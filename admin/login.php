@@ -7,7 +7,7 @@ require_once("../includes/initialize.php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prowes | Admin Login</title> 
+	<title>Bluecollar | Admin Login</title> 
   <link rel="icon" href="<?php echo web_root;?>images/favicon.ico">
 	<style type="text/css">
    
@@ -24,16 +24,19 @@ require_once("../includes/initialize.php");
 .clearfix:after{clear:both;display:block}
 a{color:inherit;text-decoration:none}
 
+
 .login-wrap{
+  border-radius: 10px;
   width:100%;
-  margin:auto;
+  margin: auto;
   max-width:525px;
   min-height:670px;
   position:relative;
   background:url('../images/logo.png') no-repeat center;
-  box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+  box-shadow:0 12px 15px 0 rgba(10,0,0,.24),0 17px 50px 0 rgba(0,20,0,.19);
 }
 .login-html{
+  border-radius: 10px;
   width:100%;
   height:100%;
   position:absolute;
@@ -51,11 +54,17 @@ a{color:inherit;text-decoration:none}
 .label{
   color: #fff;
 }
- 
+
 .login-html .tab,
 .login-form .group .label,
 .login-form .group .button{
   text-transform:uppercase;
+  letter-spacing: 1px;
+}
+
+.login-html .tab{
+  text-align: center;
+  letter-spacing: 1px;
 }
 .login-html .tab{
   font-size:22px;
@@ -112,7 +121,7 @@ a{color:inherit;text-decoration:none}
 }
  
 .hr{
-  height:2px;
+  height: 3px;
   margin:60px 0 50px 0;
   background:rgba(255,255,255,.2);
 }
@@ -130,7 +139,7 @@ a{color:inherit;text-decoration:none}
  <div class="login-wrap">
   <div class="login-html">
 
-    <label class="tab">Sign In</label>  
+    <label class="tab">Admin Sign In</label>  
     <div class="error-chk"><?php check_message();?></div>
     <div class="hr"></div>
     <div class="login-form">

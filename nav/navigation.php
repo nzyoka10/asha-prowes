@@ -127,7 +127,7 @@
                     </li>
 
               
-                    <li class="rd-nav-item <?php echo ($q=='location') ? 'active' : ''; ?>"><a class="rd-nav-link" href="index.php?q=location">Service Providers Locations</a>
+                    <li class="rd-nav-item <?php echo ($q=='location') ? 'active' : ''; ?>"><a class="rd-nav-link" href="index.php?q=location">Service Locations</a>
                     </li>
                     <li class="rd-nav-item <?php echo ($q=='contact') ? 'active' : ''; ?>"><a class="rd-nav-link" href="<?php echo web_root;?>index.php?q=contact">Contacts</a>
                     </li>
