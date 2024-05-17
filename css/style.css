@@ -76,7 +76,7 @@ body {
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 2;
-	color: #0b0a0a;
+	color: #e2dbdb;
 	text-align: left;
 	background-color: #fffefe;
 }
@@ -236,6 +236,7 @@ caption {
 	color: #6c757d;
 	text-align: left;
 	caption-side: bottom;
+	border-radius: 10px;
 }
 
 th {

@@ -206,7 +206,7 @@
                       <div class="unit-left">
                         <div class="info-classic-icon fa-facebook"></div>
                       </div>
-                      <div class="unit-body"><a class="info-classic-link" href="https://www.facebook.com/zigtash.hemed">Follow on Facebook</a></div>
+                      <div class="unit-body"><a class="info-classic-link" href="https://www.facebook.com/#">Follow on Facebook</a></div>
                     </div>
                   </article>
                 </div>
